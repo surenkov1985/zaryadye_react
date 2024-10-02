@@ -1,14 +1,20 @@
 import React, {ReactNode} from 'react';
 import styled from "styled-components";
+import {HeaderTop} from "./headerTop/HeaderTop";
+import {HeaderBottom} from "./headerBottom/HeaderBottom";
+import {Container} from "../../container/Container";
 
 type PropsType = {
-    children: ReactNode
+
 }
-export const Header = ({children}:PropsType) => {
+export const Header = () => {
     return (
-        <div>
-            {children}
-        </div>
+        <StyledHeader>
+            <Container>
+                <HeaderTop/>
+                <HeaderBottom />
+            </Container>
+        </StyledHeader>
     );
 };
 
